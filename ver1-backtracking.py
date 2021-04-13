@@ -50,8 +50,8 @@ def TRY(k):
             
             if checkStop():
                 solution(k)
-
-            TRY(k+1)
+            if curDistance < minDistance:
+                TRY(k+1)
 
             # Recover
             curDistance = curDistance - d[x[k-1]][x[k]]
@@ -61,7 +61,7 @@ def TRY(k):
 
 
 t1 = time.time()
-N, M, Q, d, q = input('test_20_10_1.txt')
+N, M, Q, d, q = input('test_10_10.txt')
 x = [0 for i in range(M+1)]                 # x[i]: i-th destination
 visited = [False for i in range(M+1)]       # visited[i] = True if went to i
 curDistance = 0                             
