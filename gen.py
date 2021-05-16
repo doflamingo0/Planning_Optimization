@@ -39,5 +39,5 @@ def genData(fileName, N, M):
         f.write(s)
         f.close()
 
-genData('test_60_40.txt', 60,40)
+genData('test_20_10.txt', 20,10)
 
