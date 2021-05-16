@@ -22,7 +22,7 @@ def genData(fileName, N, M):
         for i in range(M+1):
             for j in range(i, M+1):
                 if i != j:
-                    d[i][j] = d[j][i] = rd.randint(1, 10)
+                    d[i][j] = d[j][i] = rd.randint(1, 15)
         
         for i in range(M+1):
             s = ''
@@ -34,10 +34,10 @@ def genData(fileName, N, M):
         # Generate a order include q(i): is number of item i, i = 1...N
         s = ''
         for i in range(N):
-            c = rd.randint(1, int(x[i]/2))
+            c = rd.randint(1, x[i])
             s = s + str(c) + ' '
         f.write(s)
         f.close()
 
-genData('test_20_10_1.txt', 20, 10)
+genData('test_60_40.txt', 60,40)
 
