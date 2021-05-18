@@ -23,7 +23,7 @@ def input(fileName):
         return N, M, Q, d, q
 
 t1 = time.time()
-N,M,Q,d,q = input('test_30_20.txt')
+N,M,Q,d,q = input('test_30_13.txt')
 # xu ly du lieu
 # maxd la tong tat ca cac canh cua do thi duong di
 maxd = 0
