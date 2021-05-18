@@ -181,7 +181,7 @@ def Solve(M, N, q, Q, d, total, maxd):
 
 def main():
     t1 = time.time()
-    N, M, Q, d, q = input('test_20_8.txt')
+    N, M, Q, d, q = input('test_20_10.txt')
     total = [0 for i in range(N)]
     for i in range(N):
         for j in range(M+1):
