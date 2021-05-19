@@ -32,12 +32,14 @@ def genData(fileName, N, M):
         
 
         # Generate a order include q(i): is number of item i, i = 1...N
-        s = ''
+        q = ''
         for i in range(N):
             c = rd.randint(1, x[i])
-            s = s + str(c) + ' '
-        f.write(s)
+            q = q + str(c) + ' '
+        f.write(q)
         f.close()
 
-genData('test_30_13.txt', 30,13)
+genData('test_100_80.txt',100,80)
+genData('test_100_90.txt',100,90)
+# genData('test_150_100.txt',150,100)
 

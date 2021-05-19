@@ -36,11 +36,12 @@ def checkStop():
     return True
 
 def solution(k):
+    global idx
     global minDistance
     if minDistance > curDistance + d[x[k]][0]:
         minDistance = curDistance + d[x[k]][0]
-        print('update:', minDistance)
-        print(x[:k+1])
+        idx = k+1
+        rs[:k+1] = x[:k+1]
 
 def TRY(k):
     global q, curDistance
@@ -69,12 +70,15 @@ def TRY(k):
 
 
 t1 = time.time()
-N, M, Q, d, q = input('test_30_20.txt')
+N, M, Q, d, q = input('test_30_15.txt')
 x = [0 for i in range(M+1)]                 # x[i]: i-th destination
 visited = [False for i in range(M+1)]       # visited[i] = True if went to i
 curDistance = 0                             
 minDistance = 1e9
-
+rs = [0 for i in range(M+1)]                # result
+idx = 0
 TRY(1)
+print("Objective:", minDistance)
+print("Route:", rs[:idx])
 t2 = time.time()
-print('Time:',round(t2-t1, 2), 'seconds')
+print('Time:',t2-t1, 'seconds')
