@@ -39,7 +39,7 @@ def genData(fileName, N, M):
         f.write(q)
         f.close()
 
-genData('test_100_80.txt',100,80)
-genData('test_100_90.txt',100,90)
+genData('test_5000_1000.txt',5000,1000)
+
 # genData('test_150_100.txt',150,100)
 
